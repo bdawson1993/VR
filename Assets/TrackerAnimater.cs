@@ -26,6 +26,6 @@ public class TrackerAnimater : MonoBehaviour
     {
         deltaX = (transform.position.x - lastX);
         lastX = transform.position.x;
-        Debug.Log(deltaX);
+        //Debug.Log(deltaX);
     }
 }
