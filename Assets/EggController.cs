@@ -10,9 +10,12 @@ public class EggController : MonoBehaviour
 
     Rigidbody outerShellRB;
 
+    OVRGrabbable grabber;
+
     void Start()
     {
         outerShellRB = GetComponent<Rigidbody>();
+        
     }
 
     // Update is called once per frame
@@ -38,4 +41,6 @@ public class EggController : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+
+    
 }

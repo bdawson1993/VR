@@ -1,0 +1,13 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CookingController : MonoBehaviour
+{
+    // Start is called before the first frame update
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.rigidbody.tag == "Food")
+            GetComponent<AudioSource>().Play();
+    }
+}
