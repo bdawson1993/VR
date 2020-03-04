@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Kitchen.unity
+    guid: 7834210ae5c77bf46bcb2c85a42175d5
+  - enabled: 1
+    path: Assets/Scenes/Death.unity
+    guid: 88454f1fb0941d545b8076c146f89f17
   m_configObjects: {}
