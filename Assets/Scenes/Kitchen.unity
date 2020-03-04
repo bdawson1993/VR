@@ -3720,6 +3720,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ff65fe1a39716743b170fa59da55b04, type: 3}
+--- !u!1 &1656741870 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8685146403954161445, guid: 37ebb6b8e374e70489dc699c03b0d178,
+    type: 3}
+  m_PrefabInstance: {fileID: 3858084842182448359}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1678383998 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5146094529821136304, guid: 0499541433fe8ab429ffd424346305a5,
@@ -4854,6 +4860,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 799883479}
     m_Modifications:
+    - target: {fileID: 341202682231025940, guid: 37ebb6b8e374e70489dc699c03b0d178,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.487
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858084843735536433, guid: 37ebb6b8e374e70489dc699c03b0d178,
+        type: 3}
+      propertyPath: knifeObj
+      value: 
+      objectReference: {fileID: 1656741870}
+    - target: {fileID: 3858084843735536433, guid: 37ebb6b8e374e70489dc699c03b0d178,
+        type: 3}
+      propertyPath: speed
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 5092241521586289681, guid: 37ebb6b8e374e70489dc699c03b0d178,
         type: 3}
       propertyPath: m_Name
