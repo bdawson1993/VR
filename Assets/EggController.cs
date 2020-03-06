@@ -7,15 +7,16 @@ public class EggController : MonoBehaviour
     // Start is called before the first frame update
     public GameObject inside;
     public GameObject brokenShell;
+    
 
     Rigidbody outerShellRB;
+    
 
-    OVRGrabbable grabber;
 
+    
     void Start()
     {
         outerShellRB = GetComponent<Rigidbody>();
-        
     }
 
     // Update is called once per frame
@@ -26,7 +27,7 @@ public class EggController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(outerShellRB.velocity.magnitude);
+       //Debug.Log(outerShellRB.velocity.magnitude);
 
         if(outerShellRB.velocity.magnitude >= 1)
         {
