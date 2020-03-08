@@ -14,13 +14,18 @@ public class CookingController : MonoBehaviour
     bool isCooked = false;
     Renderer renderer;
     Material startingMaterial;
-
+    Timer timer = new Timer();
 
     private void Start()
     {
         audio = GetComponent<AudioSource>();
         renderer = GetComponent<Renderer>();
         startingMaterial = renderer.material;
+
+
+        //config timer
+        timer.SetGoal(0, 2, 0);
+        timer.GoalReached.AddListener(Cooked);
     }
 
     // Start is called before the first frame update
@@ -33,23 +38,27 @@ public class CookingController : MonoBehaviour
         }
     }
 
-    private void OnCollisionLeave(Collision collision)
+
+
+    private void OnCollisionExit(Collision collision)
     {
-        if(audio.isPlaying)
+        if (audio.isPlaying)
         {
             audio.Stop();
         }
-
     }
-
+    
     private void Update()
     {
-        if(isCooking)
+        if( (isCooking == true) && (isCooked == false))
         {
-            Debug.Log("Cooking");
-
-            float lerp = Mathf.PingPong(Time.time, cookingTime) / cookingTime;
-            renderer.material.Lerp(startingMaterial, cookedMateial, lerp);
+            timer.Update();
         }
+    }
+
+    void Cooked()
+    {
+        isCooked = true;
+        renderer.material = cookedMateial;
     }
 }
