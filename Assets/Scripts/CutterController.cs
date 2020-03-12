@@ -24,14 +24,17 @@ public class CutterController : MonoBehaviour
     {
         Cut();
 
-        
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Food")
+        if((other.tag == "Food") && (other.tag == "Player"))
         {
-            Destroy(other);
+            if(other.tag == "Food")
+            {
+                Destroy(other);
+            }
+
             Instantiate(chips, spawnLocation.transform.position, spawnLocation.transform.rotation);
             doCut = true;
             knifeObj.transform.Translate(Vector3.down);

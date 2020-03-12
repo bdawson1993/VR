@@ -14,4 +14,12 @@ public class KillPlayer : MonoBehaviour
             SceneManager.LoadScene(2);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.root.CompareTag("Player"))
+        {
+            SceneManager.LoadScene(2);
+        }
+    }
 }

@@ -1,34 +1,9 @@
 fileFormatVersion: 2
-guid: 8804a1f4d82063240bffb99a801a37ef
+guid: 85b27c967aea03448918c4486325a5b5
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Body
-    second: {fileID: 2100000, guid: 2ff145648a2c5a545a181d49a5a38f73, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Handle
-    second: {fileID: 2100000, guid: 5e646233d6c7acd45addbc8ea03c069b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Hob Body
-    second: {fileID: 2100000, guid: 48cd4cabf09cba44195a9a09182f8936, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: No Name
-    second: {fileID: 2100000, guid: a99d9892e4024584791940041b51345f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Screen
-    second: {fileID: 2100000, guid: 4684562b0d4180d49ad039711ac6efd3, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0

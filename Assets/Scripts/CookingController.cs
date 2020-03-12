@@ -7,6 +7,7 @@ public class CookingController : MonoBehaviour
     public LevelController controller;
     public Material cookedMateial;
     public float cookingTime;
+    public string name;
 
 
     AudioSource audio;
@@ -24,7 +25,7 @@ public class CookingController : MonoBehaviour
 
 
         //config timer
-        timer.SetGoal(0, 2, 0);
+        timer.SetGoal(0, 20, 0);
         timer.GoalReached.AddListener(Cooked);
     }
 
@@ -44,7 +45,7 @@ public class CookingController : MonoBehaviour
     {
         if (audio.isPlaying)
         {
-            audio.Stop();
+            //audio.Stop();
         }
     }
     
@@ -60,5 +61,6 @@ public class CookingController : MonoBehaviour
     {
         isCooked = true;
         renderer.material = cookedMateial;
+        controller.IngredientCooked(name);
     }
 }
