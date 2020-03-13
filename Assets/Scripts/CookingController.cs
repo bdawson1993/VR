@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class CookingController : MonoBehaviour
 {
-    public LevelController controller;
     public Material cookedMateial;
     public float cookingTime;
-    public string name;
+    public bool isCooked = false;
 
+    public int cookingTimeMinutes;
+    public int cookingTimeSeconds;
+
+    /// <summary>
+    /// The name of the ingredient 
+    /// </summary>
+    public string name;
 
     AudioSource audio;
     bool isCooking = false;
-    bool isCooked = false;
     Renderer renderer;
     Material startingMaterial;
     Timer timer = new Timer();
@@ -25,7 +30,7 @@ public class CookingController : MonoBehaviour
 
 
         //config timer
-        timer.SetGoal(0, 20, 0);
+        timer.SetGoal(cookingTimeMinutes, cookingTimeSeconds, 0);
         timer.GoalReached.AddListener(Cooked);
     }
 
@@ -39,13 +44,11 @@ public class CookingController : MonoBehaviour
         }
     }
 
-
-
     private void OnCollisionExit(Collision collision)
     {
         if (audio.isPlaying)
         {
-            //audio.Stop();
+            audio.Stop();
         }
     }
     
@@ -61,6 +64,6 @@ public class CookingController : MonoBehaviour
     {
         isCooked = true;
         renderer.material = cookedMateial;
-        controller.IngredientCooked(name);
+        //controller.IngredientCooked(name);
     }
 }

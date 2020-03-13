@@ -23,7 +23,7 @@ public class LevelController : MonoBehaviour
     }
 
    
-    public void IngredientCooked(string name)
+    public void IngredientReady(string name)
     {
         //remove ingredient if in list
         if (currentRecipe.Contains(name.ToUpper()))
@@ -34,9 +34,11 @@ public class LevelController : MonoBehaviour
         //if last in list change to next recipe
         if(currentRecipe.Count == 0)
         {
+            GetComponent<AudioSource>().Play();
+            points.score = points.score + 10;
             recipes[index].SetActive(false);
             recipes[index + 1].SetActive(true);
-            points.score += 10;
+           
             index++;
 
         }
